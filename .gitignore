@@ -6,3 +6,7 @@ __pycache__/
 
 # VS Code stuff
 /.vscode
+
+# Data
+*model_dir*
+*data*

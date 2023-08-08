@@ -975,7 +975,7 @@ class PyTorchBaseRunner(metaclass=abc.ABCMeta):
                 model: PyTorchBaseModel = model_fn(params, device)
                 return PyTorchRunner(device, model, params)
             else:  # use gpu
-                world_size = torch.cuda.device_count()
+                world_size = 1 # torch.cuda.device_count()
                 if world_size == 1:  # single gpu
                     device = torch.device("cuda")
                     model: PyTorchBaseModel = model_fn(params, device)

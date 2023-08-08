@@ -129,7 +129,7 @@ class PyTorchRunner(PyTorchBaseRunner):
             self._active_mode.title(),
             'Device={}'.format(self._device.type),
             'Step={}'.format(step),
-            'Loss={:.5f}'.format(loss),
+            'Loss={:.5f}'.format(float(loss)),
             'Time={}'.format(datetime.now().strftime('%H:%M:%S')),
         ]
         logging.info(f"| {' '.join(item for item in update_data if item)}")
